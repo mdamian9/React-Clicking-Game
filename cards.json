@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "image": "/assets/images/01.jpg",
+        "name": "Rick"
+    },
+    {
+        "id": 2,
+        "image": "/assets/images/02.jpeg",
+        "name": "Morty"
+    },
+    {
+        "id": 3,
+        "image": "/assets/images/03.jpg",
+        "name": "Summer"
+    },
+    {
+        "id": 4,
+        "image": "/assets/images/04.jpg",
+        "name": "Beth"
+    },
+    {
+        "id": 5,
+        "image": "/assets/images/05.jpeg",
+        "name": "Jerry"
+    },
+    {
+        "id": 6,
+        "image": "/assets/images/06.jpg",
+        "name": "Birdperson"
+    },
+    {
+        "id": 7,
+        "image": "/assets/images/07.jpg",
+        "name": "Mr. Meeseks"
+    },
+    {
+        "id": 8,
+        "image": "/assets/images/08.jpg",
+        "name": "Scary Terry"
+    },
+    {
+        "id": 9,
+        "image": "/assets/images/09.jpg",
+        "name": "Squanchy"
+    },
+    {
+        "id": 10,
+        "image": "/assets/images/10.jpg",
+        "name": "Abradolf Lincler"
+    },
+    {
+        "id": 11,
+        "image": "/assets/images/11.jpg",
+        "name": "Noob Noob"
+    },
+    {
+        "id": 12,
+        "image": "/assets/images/12.jpg",
+        "name": "Pickle Rick"
+    },
+    {
+        "id": 13,
+        "image": "/assets/images/13.jpg",
+        "name": "Mr. Poopybutthole"
+    },
+    {
+        "id": 14,
+        "image": "/assets/images/14.jpeg",
+        "name": "Baby Legs"
+    },
+    {
+        "id": 15,
+        "image": "/assets/images/15.jpg",
+        "name": "Tiny Rick"
+    },
+    {
+        "id": 16,
+        "image": "/assets/images/16.jpg",
+        "name": "Ants-In-My-Eyes Johnson"
+    },
+    {
+        "id": 17,
+        "image": "/assets/images/17.jpg",
+        "name": "Steally"
+    },
+    {
+        "id": 18,
+        "image": "/assets/images/18.jpg",
+        "name": "Snuffles"
+    }
+]

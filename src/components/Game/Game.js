@@ -11,9 +11,17 @@ class Game extends Component {
         return (
             <div>
                 {this.state.characters.map(character => (
-                    <p>
-                        {character.name}
-                    </p>
+                    <div>
+                        <p>
+                            {character.id}
+                        </p>
+                        <p>
+                            {character.name}
+                        </p>
+                        <img alt="character">
+                            {character.image}
+                        </img>
+                    </div>
                 ))}
             </div>
         );

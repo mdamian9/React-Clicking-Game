@@ -6,7 +6,26 @@ import cards from "../../cards.json";
 class Game extends Component {
 
     state = {
-        characters: cards
+        characters: cards,
+        matches: 0,
+        guesses: 0,
+        matchedCharacter: 9
+    }
+
+    getCharacter = (id) => {
+        if (id === this.state.matchedCharacter) {
+            // If character is a match, update matches state by 1, pick a new random character
+            let randomId = Math.floor(Math.random() * this.state.characters.length) + 1;
+            this.setState({
+                matches: this.state.matches + 1,
+                matchedCharacter: randomId
+            });
+        } else {
+            // If not a match, update guesses state by 1
+            this.setState({
+                guesses: this.state.guesses + 1
+            });
+        };
     };
 
     render() {

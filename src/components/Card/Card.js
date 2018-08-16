@@ -4,7 +4,7 @@ const Card = props => (
     <div key={props.id}
         className="col-sm-4 char-card"
         style={{ backgroundImage: `url("${props.image}")` }}
-        onClick={() => props.getChihuahua(props.id)}
+        onClick={() => props.getCharacter(props.id)}
     >
         <p>{props.name}</p>
     </div>

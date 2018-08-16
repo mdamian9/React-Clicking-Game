@@ -2,10 +2,9 @@ import React from "react";
 import "./Scoreboard.css";
 
 const Scoreboard = props => (
-    <div className="jumbotron">
+    <div className="jumbotron" style={{marginTop: 2 + 'em'}}>
         <h1>Rick and Morty Characters Memory Game</h1>
-        <p>Matches: {props.matches}</p>
-        <p>Number of Guesses: {props.guesses}</p>
+        <p>Score: {props.score}</p>
         <p>Click on a character and try to remember it!</p>
     </div>
 );

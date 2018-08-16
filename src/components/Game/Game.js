@@ -7,24 +7,22 @@ class Game extends Component {
 
     state = {
         characters: cards,
-        matches: 0,
-        guesses: 0,
-        matchedCharacter: 9
-    }
+        score: 0,
+        idArray: []
+    };
 
-    getCharacter = (id) => {
-        if (id === this.state.matchedCharacter) {
-            // If character is a match, update matches state by 1, pick a new random character
-            let randomId = Math.floor(Math.random() * this.state.characters.length) + 1;
+    matchCharacter = (id) => {
+
+        if (this.state.idArray.includes(id)) {
             this.setState({
-                matches: this.state.matches + 1,
-                matchedCharacter: randomId
+                score: 0,
+                idArray: []
             });
         } else {
-            // If not a match, update guesses state by 1
             this.setState({
-                guesses: this.state.guesses + 1
+                score: this.state.score + 1
             });
+            this.state.idArray.push(id);
         };
     };
 
@@ -32,8 +30,7 @@ class Game extends Component {
         return (
             <div className="container">
                 <Scoreboard
-                    matches={this.state.matches}
-                    guesses={this.state.guesses}
+                    score={this.state.score}
                 />
                 <div className="row">
                     {this.state.characters.map(character => (
@@ -42,7 +39,7 @@ class Game extends Component {
                             id={character.id}
                             name={character.name}
                             image={character.image}
-                            getCharacter={this.getCharacter}
+                            matchCharacter={this.matchCharacter}
                         />
                     ))}
                 </div>

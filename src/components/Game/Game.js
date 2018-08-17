@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Scoreboard from "../Scoreboard"
 import Card from "../Card"
 import cards from "../../cards.json";
+import "./Game.css"
 
 class Game extends Component {
 
@@ -10,6 +11,9 @@ class Game extends Component {
     state = {
         characters: cards,
         score: 0,
+        wins: 0,
+        losses: 0,
+        chain: 0,
         idArr: []
     };
 
@@ -42,24 +46,38 @@ class Game extends Component {
             this.setState({
                 characters: this.shuffleCards(cards),
                 score: 0,
+                losses: this.state.losses + 1,
                 idArr: []
             });
         } else {
             // If the id does not exist in idArr yet, shuffle cards, increase user score by 1, and push the id into idArr.
             this.setState({
                 characters: this.shuffleCards(cards),
-                score: this.state.score + 1
+                score: this.state.score + 1,
             });
             this.state.idArr.push(id);
+            console.log(this.state.score);
+        };
+
+        // If score is 9 (but only works if set to 8 for some reason --- console log above prints out 8 but shows as 9 in DOM)
+        if (this.state.score === 8) {
+            this.setState({
+                characters: this.shuffleCards(cards),
+                score: 0,
+                wins: this.state.wins + 1,
+                idArr: []
+            });
         };
     };
 
     // Render function that will render our component.
     render() {
         return (
-            <div className="container">
+            <div className="container game">
                 <Scoreboard
                     score={this.state.score}
+                    wins={this.state.wins}
+                    losses={this.state.losses}
                 />
                 <div className="row">
                     {this.state.characters.map(character => (

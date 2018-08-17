@@ -7,3 +7,5 @@ This is a "clicking" game created with React.js:
 * Each time a character is clicked, all the character images are shuffled.
 * If the user has already clicked on a character, they lose the game and the game is reset.
 * If the user clicks on all 9 characters without clicking on the same on twice, they win the game.
+
+Deployed site: https://react-clicking-game.herokuapp.com/
